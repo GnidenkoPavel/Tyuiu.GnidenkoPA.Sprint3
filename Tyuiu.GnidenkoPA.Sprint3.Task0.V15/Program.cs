@@ -11,7 +11,12 @@ namespace Tyuiu.GnidenkoPA.Sprint3.Task0.V15
             Console.WriteLine("***************************************************************************");
 
             double t = 0.7;
+            int startValue = 1;
+            int stopValue = 10;
+
             Console.WriteLine($"Значение t = {t}");
+            Console.WriteLine($"Старт шага = {startValue}");
+            Console.WriteLine($"Конец шага = {stopValue}");
 
             Console.WriteLine();
             Console.WriteLine("***************************************************************************");
@@ -19,9 +24,9 @@ namespace Tyuiu.GnidenkoPA.Sprint3.Task0.V15
             Console.WriteLine("***************************************************************************");
 
             DataService ds = new DataService();
-            double result = ds.DistanceOverTime(0, 0, 0, t);
+            double result = ds.GetSumSeries(t, startValue, stopValue);
 
-            Console.WriteLine($"Сумма ряда S при t = {t} равна: {result:F4}");
+            Console.WriteLine($"Сумма ряда S = {result:F4}");
             Console.ReadKey();
         }
     }

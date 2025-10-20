@@ -1,18 +1,18 @@
 ﻿using tyuiu.cources.programming.interfaces;
 using tyuiu.cources.programming.interfaces.Sprint1;
+using tyuiu.cources.programming.interfaces.Sprint3;
 namespace Tyuiu.GnidenkoPA.Sprint3.Task0.V15.Lib
 {
-    public class DataService : ISprint1Task3V15
+    public class DataService : ISprint3Task0V15
     {
-        public double DistanceOverTime(double v1, double v2, double S, double T)
+        public double GetSumSeries(double value, int startValue, int stopValue)
         {
-            double t = T;
             double sum = 0;
-            double sinT = Math.Sin(t);
+            double sinValue = Math.Sin(value);
 
-            for (int k = 1; k <= 10; k++)
+            for (int k = startValue; k <= stopValue; k++)
             {
-                double term = (Math.Pow(t, k) + (2.0 / (k + 1))) * sinT;
+                double term = (Math.Pow(value, k) + (2.0 / (k + 1))) * sinValue;
                 sum += term;
             }
 
