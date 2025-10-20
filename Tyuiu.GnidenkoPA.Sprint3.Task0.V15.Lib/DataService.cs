@@ -16,7 +16,7 @@ namespace Tyuiu.GnidenkoPA.Sprint3.Task0.V15.Lib
                 sum += term;
             }
 
-            return sum;
+            return Math.Round(sum, 3);
         }
     }
 }
